@@ -14,13 +14,9 @@ import segTree.SegmentTree;
 
 public class SegmentTreeTest {
 
-	@Test
-	public void test() {
-		constructorTest1();
-		constructorTest2();
-	}
 	
-	private void constructorTest1() {
+	@Test
+	public void constructorTest1() {
 		Integer elem[] = {1, 2, 3, 4, 5, 6};
 		SegmentTree<Integer> segTreeSum = new SegmentTree<Integer>(elem, new STreeComputator<Integer>() {
 
@@ -41,7 +37,8 @@ public class SegmentTreeTest {
 		assertEquals(new Integer(4), segTreeMax.query(1, 3));
 	}
 	
-	private void constructorTest2() {
+	@Test
+	public void constructorTest2() {
 		Map <Object, Integer> elem = new LinkedHashMap<Object, Integer>();
 		elem.put(getDate("01/01/2014"), 1);
 		elem.put(getDate("02/01/2014"), 2);
